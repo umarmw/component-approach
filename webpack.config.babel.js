@@ -11,16 +11,28 @@ module.exports = {
           presets: ["@babel/preset-env"]
         }
       }
-    ]
+    ],
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          name: 'commons',
+          chunks: 'initial',
+          minChunks: 2
+        }
+      }
+    }
   },
   plugins: [
   ],
   context: path.resolve(__dirname, "src/modules/"),
   entry: {
-    app: "./app.js"
+    app: "./app.js",
+    carousel: "./bootstrap-carousel.js"
   },
   output: {
     path: path.resolve(__dirname, "dist/js"),
-    filename: "apa.js"
+    filename: '[name].js'
   },
-};
+}
