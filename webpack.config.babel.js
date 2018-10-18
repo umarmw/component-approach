@@ -29,7 +29,8 @@ module.exports = {
   context: path.resolve(__dirname, "src/modules/"),
   entry: {
     app: "./app.js",
-    carousel: "./bootstrap-carousel.js"
+    carousel: "./bootstrap-carousel.js",
+    slick: "./slick-carousel.js"
   },
   output: {
     path: path.resolve(__dirname, "dist/js"),
