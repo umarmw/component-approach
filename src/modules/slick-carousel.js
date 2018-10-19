@@ -9,3 +9,5 @@ $('.slider').slick({
   arrows: true
 });
   //export default
+
+  console.log("slick-carousel> loaded");

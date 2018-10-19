@@ -20,20 +20,20 @@
 
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Carousel</a>
+        <a class="navbar-brand" href="index.html">Component Example</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="bscarousel.html">B carousel</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link" href="scarousel.html">S carousel</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
@@ -111,7 +111,7 @@
 
             <!-- Button trigger modal -->
             <p>
-<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal" data-module="modal" data-state="pending">
     View details &raquo;
   </button></p>
   
@@ -142,7 +142,35 @@
             <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
             <h2>Heading</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <!-- Button trigger modal -->
+            <p>
+              <button type="button" class="btn btn-secondary js-slider-btn" data-toggle="modal" data-target="#sliderModal" data-module="modal" data-state="pending">
+                  View Ajax details &raquo;
+              </button>
+            </p>
+                
+            <!-- Modal -->
+            <div class="modal fade js-slider-modal" id="sliderModal" tabindex="-1" role="dialog" aria-labelledby="sliderModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="sliderModalLabel">Ajax Modal Heading</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Ajax content here!!
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- EO MODAL -->
+
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
@@ -208,35 +236,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/bootloader.js"></script>
     <script src="./js/commons.js"></script>
     <script src="./js/app.js"></script>
 
-    <!-- <script src="./js/carousel.js"></script> -->
-
-
-
-    <!--
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>-->
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <!-- <script src="../../assets/js/vendor/holder.min.js"></script>-->
-
-    <script>
-    var modules = document.querySelectorAll('[data-module]');
-    modules.forEach(function(i, e){
-      console.log(i.getAttribute('data-module'));
-      var module = i.getAttribute('data-module');
-
-      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-      po.src = './js/'+module+'.js';
-      po.id = 'module-'+module;
-      if (!document.getElementById('module-'+module)) {
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-      }
-      i.setAttribute("data-state", "loaded");
-
-      console.log(e);
-    });
-    </script>
   </body>
 </html>

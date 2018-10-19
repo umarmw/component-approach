@@ -24,13 +24,20 @@ module.exports = {
       }
     }
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000
+  },
   plugins: [
   ],
   context: path.resolve(__dirname, "src/modules/"),
   entry: {
+    bootloader: "./bootloader.js",
     app: "./app.js",
     carousel: "./bootstrap-carousel.js",
-    slick: "./slick-carousel.js"
+    slick: "./slick-carousel.js",
+    modal: "./modal.js"
   },
   output: {
     path: path.resolve(__dirname, "dist/js"),
