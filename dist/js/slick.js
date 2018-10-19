@@ -173,7 +173,7 @@ eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPAC
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"../../node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\n__webpack_require__(/*! slick-carousel */ \"../../node_modules/slick-carousel/slick/slick.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//import \"jquery\";\n(0, _jquery2.default)('.slider').slick({\n  dots: true,\n  arrows: true\n}); //export default\n\n//# sourceURL=webpack:///./slick-carousel.js?");
+eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"../../node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\n__webpack_require__(/*! slick-carousel */ \"../../node_modules/slick-carousel/slick/slick.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//import \"jquery\";\n(0, _jquery2.default)('.slider').slick({\n  dots: true,\n  arrows: true\n}); //export default\n\nconsole.log(\"slick-carousel> loaded\");\n\n//# sourceURL=webpack:///./slick-carousel.js?");
 
 /***/ })
 

@@ -18,15 +18,13 @@ var bootloader = function() {
 //execute the bootloader
 bootloader();
 
-
-
 // select the target node
 var target = document.querySelector('body');
  
 // create an observer instance
 var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-        console.log(mutation.type);
+        // console.log(mutation.type);
         if(mutation.type == "childList"){
             //add the JS and set the state to loaded
             bootloader();
